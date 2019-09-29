@@ -50,6 +50,8 @@ app.post('/getarticle', (req, res) => {
   rp({
     // uri: `https://onezero.medium.com/heres-how-amazon-alexa-will-recognize-when-you-re-frustrated-a9e31751daf7`,
     uri: req.body.art_url,
+    pool: false,
+    agent: false,
     transform: function(body){
       return cheerio.load(body);
     }
