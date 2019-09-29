@@ -162,6 +162,16 @@
         overflow: hidden;
     }
 
+    .main{
+        margin:40px auto;
+        max-width:650px;
+        line-height:1.6;
+        font-size:18px;
+        color:#444;padding:0 10px
+    }
+    h1,h2,h3{
+        line-height:1.2
+    }
 }
 </style>
 <div class="custom-menu-wrapper">
@@ -198,10 +208,7 @@ document.getElementById('toggle').addEventListener('click', function (e) {
 
 <div class="main">
 
-    <h1>Large Medium Small</h1>
-    <h3>An ultralight Medium article reader</h3>
-
-    <p>Paste a URL to a medium article here:</p>
+    <%- art_content %>
 
 </div>
 
