@@ -7,12 +7,43 @@
      small window widths, and which scrolls when revealed.">    <title>Large Medium Small</title>    
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Gudea&display=swap&text=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%20%27%22" rel="stylesheet"> 
     
 </head>
 <body>
 
 <style>
+
+
+
+p{
+    font-size: 120%;
+}
+
+h1{
+    font-size: 240%;
+    line-height: 1.5em;
+}
+
+.article-main{
+    margin:40px auto;
+    max-width:650px;
+    line-height:1.6;
+    font-size:18px;
+    color:#444;padding:0 10px
+}
+
+h1,h2,h3{
+    line-height:1.2
+}
+
+
+
+.article-main{
+    font-family: 'Gudea', sans-serif;
+    line-height: 2.2em;
+}
+
 .custom-menu-wrapper {
     background-color: #808080;
     margin-bottom: 2.5em;
@@ -162,16 +193,7 @@
         overflow: hidden;
     }
 
-    .article-main{
-        margin:40px auto;
-        max-width:650px;
-        line-height:1.6;
-        font-size:18px;
-        color:#444;padding:0 10px
-    }
-    h1,h2,h3{
-        line-height:1.2
-    }
+
 }
 </style>
 <div class="custom-menu-wrapper">
@@ -207,14 +229,13 @@ document.getElementById('toggle').addEventListener('click', function (e) {
 </style> -->
 
 
-<div class="pure-g">
-    <div class="pure-u-1 pure-u-md-1-3"> </div>
-    <div class="pure-u-1 pure-u-md-1-3"> <div class="article-main">
-
-    <%- art_content %>
-
-</div> </div>
-    <!-- <div class="pure-u-1 pure-u-md-1-3"></div> -->
+<div>
+    <div class="pure-u-1 pure-u-md-1-5"> </div>
+    <div class="pure-u-1 pure-u-md-3-5"> 
+        <div class="article-main">
+            <%- art_content %>
+        </div> 
+    </div>
 </div>
 
 
