@@ -4,7 +4,8 @@
   "description": "A webapp for reading medium sites without killing your data cap",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "express-validator": "^6.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
+  },
+  "engines": {
+    "node": "12.10.0"
   }
 }
