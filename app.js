@@ -23,9 +23,9 @@ app.use(bodyParser.urlencoded());
 // For generating the HTML of the article
 const wrappedTag = (dom_ele) => {
 
-  cheerio(dom_ele).each(() => {
-    cheerio(this).removeClass();
-  });
+  // cheerio(dom_ele).each(() => {
+  //   cheerio(this).removeClass();
+  // });
 
   return `<${cheerio(dom_ele).prop("tagName")}>${cheerio(dom_ele).html()}</${cheerio(dom_ele).prop("tagName")}>`;
 }
@@ -51,7 +51,7 @@ app.post('/getarticle', (req, res) => {
     }
   }).then(($) => {
     article_content = "";
-    $('article').find('p, h1, h2, figure, pre').each((e,v)=> {article_content += wrappedTag(v);});
+    $('article').find('p, h1, h2, pre').each((e,v)=> {article_content += wrappedTag(v);});
     res.render('article', {art_content: article_content});
   })
   .catch((err) => {
