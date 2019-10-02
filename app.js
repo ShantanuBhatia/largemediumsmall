@@ -52,6 +52,7 @@ app.post('/getarticle', (req, res) => {
   }).then(($) => {
     article_content = "";
     $('article').find('p, h1, h2, pre').each((e,v)=> {article_content += wrappedTag(v);});
+
     res.render('article', {art_content: article_content});
   })
   .catch((err) => {
